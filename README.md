@@ -1,3 +1,25 @@
+# NETFLİX CLONE
+
+I coded ***Netflix-Clone*** to improve myself.
+
+## Live Demo
+
+*[Live Demo](https://62d667e2a723ce617f939b52--silver-biscochitos-da3433.netlify.app/)*
+
+## Used Technologies 
+
++ React.Js
++ Tailwindcss
++ Firebase
+
+
+## Resources that I have used
+
++ [Netflix](https://www.netflix.com/)
++ [Video](https://www.youtube.com/watch?v=ATz8wg6sg30)
++ [The Movie Database](https://api.themoviedb.org/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
