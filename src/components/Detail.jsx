@@ -1,31 +1,30 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import requests from '../Requests';
+import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
 
-const Main = () => {
+const Detail = () => {
+  let { id } = useParams();
+  // console.log(id)
+  const [movie, setMovie] = useState([]);
 
-    const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=9fd6e07c1ce219ab081e6f0e0c72beab`).then((response) => {
+      setMovie(response.data);
+    })
+  }, []);
 
-    const movie = movies[Math.floor(Math.random() * movies.length)]
-
-    useEffect(() => {
-      axios.get(requests.requestPopular).then((response) => {
-        setMovies(response.data.results)
-      })
-    }, []);
-
-    const truncateString = (str, num) => {
-      if (str?.length > num) {
-        return str.slice(0, num) + '...';
-      } else {
-        return str;
-      }
+  const truncateString = (str, num) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + '...';
+    } else {
+      return str;
     }
-    
+  }
+
   return (
-    <div className='w-full h-[550px] text-white'>
-      <div className='w-full h-full'>
-        <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
+    <div className='w-full h-full text-white'>
+      <div className='relative w-full h-full'>
+        <div className='absolute w-full h-full bg-gradient-to-r from-black'></div>
         <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
         <div className='absolute w-full top-[20%] p-4 md:p-8'>
           <h1 className='text-3xl md:text-5xl font-bold'>{ movie?.title }</h1>
@@ -43,4 +42,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Detail
