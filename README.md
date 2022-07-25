@@ -4,7 +4,7 @@ I coded ***Netflix-Clone*** to improve myself.
 
 ## Live Demo
 
-*[Live Demo](https://62d667e2a723ce617f939b52--silver-biscochitos-da3433.netlify.app/)*
+*[Live Demo](https://silver-biscochitos-da3433.netlify.app/)*
 
 ## Used Technologies 
 
