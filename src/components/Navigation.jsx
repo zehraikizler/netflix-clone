@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav>
-      <button onClick={PrevPage} className="w-8 h-8 mb-24 flex items-center justify-center rounded-full bg-transparent">
+      <button onClick={PrevPage} className="w-8 h-8 mb-36 md:mb-20 mt-6 flex items-center justify-center rounded-full bg-transparent">
         <IoMdArrowRoundBack size={22} name="prev" />
       </button>
     </nav>
